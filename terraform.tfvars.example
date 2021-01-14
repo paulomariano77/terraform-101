@@ -1,0 +1,13 @@
+access_key = ""
+secret_key = ""
+
+tags = {
+  BusinessUnit = "",
+  CreatedBy    = "",
+  Environment  = "",
+  Owner        = "",
+  Terraform    = true
+}
+
+instance_count = 1
+instance_type  = "t3.micro"
