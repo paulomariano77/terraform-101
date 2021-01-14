@@ -1,25 +1,25 @@
 output "ec2_information" {
-  value = "${formatlist(
+  value = formatlist(
     "%s = %s",
     (aws_instance.web.*.id),
     (aws_instance.web.*.id)
-  )}"
+  )
 }
 
 output "ec2_private_ip" {
-  value = "${formatlist(
+  value = formatlist(
     "%s = %s",
     (aws_instance.web.*.id),
     (aws_instance.web.*.private_ip)
-  )}"
+  )
 }
 
 output "ec2_public_ip" {
-  value = "${formatlist(
+  value = formatlist(
     "%s = %s",
     (aws_instance.web.*.id),
     (aws_instance.web.*.public_ip)
-  )}"
+  )
 }
 
 output "elb_dns_name" {
