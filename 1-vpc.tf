@@ -157,6 +157,15 @@ resource "aws_network_acl" "vpc_security_acl" {
     rule_no    = 300
     action     = "allow"
     cidr_block = "0.0.0.0/0"
+    from_port  = 443
+    to_port    = 443
+  }
+
+  egress {
+    protocol   = "tcp"
+    rule_no    = 400
+    action     = "allow"
+    cidr_block = "0.0.0.0/0"
     from_port  = 1024
     to_port    = 65535
   }
