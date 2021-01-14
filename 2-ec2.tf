@@ -27,7 +27,7 @@ resource "aws_instance" "web" {
     aws_security_group.allow_http.id
   ]
 
-  associate_public_ip_address = true
+  associate_public_ip_address = var.associate_public_ip_address
 
   provisioner "file" {
     source      = "./scripts/install-nginx.sh"

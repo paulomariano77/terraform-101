@@ -27,3 +27,7 @@ variable "instance_type" {
   description = "value"
   default = "t3.micro"
 }
+
+variable "associate_public_ip_address" {
+  default = true
+}
