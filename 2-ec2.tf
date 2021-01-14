@@ -32,6 +32,12 @@ resource "aws_instance" "web" {
   provisioner "file" {
     source      = "./scripts/install-nginx.sh"
     destination = "/tmp/install-nginx.sh"
+
+    connection {
+      type = "ssh"
+      user = "ubuntu"
+      host = self.public_ip
+    }
   }
 
   provisioner "remote-exec" {
@@ -39,6 +45,12 @@ resource "aws_instance" "web" {
       "chmod +x /tmp/install-nginx.sh",
       "/tmp/install-nginx.sh",
     ]
+
+    connection {
+      type = "ssh"
+      user = "ubuntu"
+      host = self.public_ip
+    }
   }
 
   depends_on = [
