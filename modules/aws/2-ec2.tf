@@ -30,7 +30,7 @@ resource "aws_instance" "web" {
   associate_public_ip_address = var.associate_public_ip_address
 
   provisioner "file" {
-    source      = "./scripts/install-nginx.sh"
+    source      = "${path.module}/../../scripts/install-nginx.sh"
     destination = "/tmp/install-nginx.sh"
 
     connection {
