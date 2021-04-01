@@ -1,0 +1,17 @@
+# Global variables
+location         = "eastus2"
+resource_group   = ""
+
+tags = {
+  BusinessUnit = "",
+  CreatedBy    = "",
+  Environment  = "",
+  Owner        = "",
+  Terraform    = true
+}
+
+# Virtual Machine variables
+vm_count          = 1
+vm_name           = ""
+vm_size           = "Standard_DS1_v2"
+vm_admin_username = "admin"
